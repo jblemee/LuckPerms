@@ -95,10 +95,10 @@ public class LPNeoForgePlugin extends AbstractLuckPermsPlugin {
         NeoForgePermissionHandlerListener permissionHandlerListener = new NeoForgePermissionHandlerListener(this);
         this.bootstrap.registerListeners(permissionHandlerListener);
 
-        if (!skipCommandRegistration()) {
+//        if (!skipCommandRegistration()) {
             this.commandManager = new NeoForgeCommandExecutor(this);
             this.bootstrap.registerListeners(this.commandManager);
-        }
+//        }
 
         PluginMessageMessenger.registerChannel();
     }
