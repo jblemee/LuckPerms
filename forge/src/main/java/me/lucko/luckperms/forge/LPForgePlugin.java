@@ -99,10 +99,8 @@ public class LPForgePlugin extends AbstractLuckPermsPlugin {
         ForgePermissionHandlerListener permissionHandlerListener = new ForgePermissionHandlerListener(this);
         this.bootstrap.registerListeners(permissionHandlerListener);
 
-        if (!skipCommandRegistration()) {
-            this.commandManager = new ForgeCommandExecutor(this);
-            this.bootstrap.registerListeners(this.commandManager);
-        }
+        this.commandManager = new ForgeCommandExecutor(this);
+        this.bootstrap.registerListeners(this.commandManager);
 
         PluginMessageMessenger.registerChannel();
     }
